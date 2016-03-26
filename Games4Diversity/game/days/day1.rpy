@@ -12,7 +12,7 @@ label day1question:
     "laura" "He doesn't pay much attention to me anymore these days, he just seems so absent. I've had this feeling for months now and I just don't know what to do."
 
     menu: 
-        "What do you say?"
+        "He doesn't pay much attention to me anymore these days, he just seems so absent. I've had this feeling for months now and I just don't know what to do."
         "kind response":
             jump day1kind
 
