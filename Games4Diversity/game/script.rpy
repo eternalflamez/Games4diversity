@@ -33,7 +33,8 @@ label dayStart:
     n 'Today is day [day].'
 
     $ day += 1
-    jump dayStart
+    $ date = "day" + str(day)
+    jump expression date
 
     return
 
