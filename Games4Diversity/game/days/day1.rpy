@@ -10,6 +10,10 @@ label day1question:
     m "Hey Laura, what can I help you with today?"
     "laura" "I feel like my husband is cheating on me."
     "laura" "He doesn't pay much attention to me anymore these days, he just seems so absent. I've had this feeling for months now and I just don't know what to do."
+    
+    $ day1options = ("Kind Response", "Harsh Response", "Sarcasm", "Flirt")
+
+    call screen dilemma(day1options)
 
     menu: 
         "He doesn't pay much attention to me anymore these days, he just seems so absent. I've had this feeling for months now and I just don't know what to do."

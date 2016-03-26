@@ -104,7 +104,7 @@ init -2:
 ######
 # A dilemma
 # ¯\_(ツ)_/¯
-screen dilemma(choice1text, choice1):
+screen dilemma(options):
     
     tag menu
     
@@ -115,12 +115,23 @@ screen dilemma(choice1text, choice1):
         idle 'ui/menus/buttons_unpressed.png' 
         hover 'ui/menus/buttons_pressed.png'
         
-        hotspot(241, 142, 415, 178) action choice1 at buttonfade
-
-        text choice1text style "buttontext"
+        hotspot(241, 142, 415, 178) action Return(0) at buttonfade
+        text options[0] style "button0text"
+        hotspot (1265, 129, 415, 180) action Return(1) at buttonfade
+        text options[1] style "button1text"
+        hotspot (107, 450, 415, 179) action Return(2) at buttonfade
+        text options[2] style "button2text"
+        hotspot (1398, 449, 416, 180) action Return(3) at buttonfade
+        text options[3] style "button3text"
        
-style buttontext:
+style button0text:
     pos(241, 142)
+style button1text:
+    pos(1265, 129)
+style button2text:
+    pos(107, 450)
+style button3text:
+    pos(1398, 449)
 
 ##############################################################################
 # Input
