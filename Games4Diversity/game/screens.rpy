@@ -101,6 +101,27 @@ init -2:
         xmaximum int(config.screen_width * 0.75)
 
 
+######
+# A dilemma
+# ¯\_(ツ)_/¯
+screen dilemma(choice1text, choice1):
+    
+    tag menu
+    
+    imagemap:
+        alpha False
+        cache False
+        ground 'ui/menus/buttons_unpressed.png'
+        idle 'ui/menus/buttons_unpressed.png' 
+        hover 'ui/menus/buttons_pressed.png'
+        
+        hotspot(241, 142, 415, 178) action choice1 at buttonfade
+
+        text choice1text style "buttontext"
+       
+style buttontext:
+    pos(241, 142)
+
 ##############################################################################
 # Input
 #
@@ -178,23 +199,19 @@ screen main_menu():
 
     # This ensures that any other menu screen is replaced.
     tag menu
+    add "ui/church.png"
 
-    # The background of the main menu.
-    window:
-        style "mm_root"
 
     # The main menu buttons.
     frame:
         style_group "mm"
-        xalign .98
-        yalign .98
+        xalign .5
+        yalign .5
 
         has vbox
 
         textbutton _("Start Game") action Start()
-        textbutton _("Load Game") action ShowMenu("load")
         textbutton _("Preferences") action ShowMenu("preferences")
-        textbutton _("Help") action Help()
         textbutton _("Quit") action Quit(confirm=False)
 
 init -2:
@@ -220,17 +237,14 @@ screen navigation():
     # The various buttons.
     frame:
         style_group "gm_nav"
-        xalign .98
-        yalign .98
+        xalign .5
+        yalign .5
 
         has vbox
 
         textbutton _("Return") action Return()
         textbutton _("Preferences") action ShowMenu("preferences")
-        textbutton _("Save Game") action ShowMenu("save")
-        textbutton _("Load Game") action ShowMenu("load")
         textbutton _("Main Menu") action MainMenu()
-        textbutton _("Help") action Help()
         textbutton _("Quit") action Quit()
 
 init -2:
@@ -239,99 +253,6 @@ init -2:
     style gm_nav_button:
         size_group "gm_nav"
 
-
-##############################################################################
-# Save, Load
-#
-# Screens that allow the user to save and load the game.
-# http://www.renpy.org/doc/html/screen_special.html#save
-# http://www.renpy.org/doc/html/screen_special.html#load
-
-# Since saving and loading are so similar, we combine them into
-# a single screen, file_picker. We then use the file_picker screen
-# from simple load and save screens.
-
-screen file_picker():
-
-    frame:
-        style "file_picker_frame"
-
-        has vbox
-
-        # The buttons at the top allow the user to pick a
-        # page of files.
-        hbox:
-            style_group "file_picker_nav"
-
-            textbutton _("Previous"):
-                action FilePagePrevious()
-
-            textbutton _("Auto"):
-                action FilePage("auto")
-
-            textbutton _("Quick"):
-                action FilePage("quick")
-
-            for i in range(1, 9):
-                textbutton str(i):
-                    action FilePage(i)
-
-            textbutton _("Next"):
-                action FilePageNext()
-
-        $ columns = 2
-        $ rows = 5
-
-        # Display a grid of file slots.
-        grid columns rows:
-            transpose True
-            xfill True
-            style_group "file_picker"
-
-            # Display ten file slots, numbered 1 - 10.
-            for i in range(1, columns * rows + 1):
-
-                # Each file slot is a button.
-                button:
-                    action FileAction(i)
-                    xfill True
-
-                    has hbox
-
-                    # Add the screenshot.
-                    add FileScreenshot(i)
-
-                    $ file_name = FileSlotName(i, columns * rows)
-                    $ file_time = FileTime(i, empty=_("Empty Slot."))
-                    $ save_name = FileSaveName(i)
-
-                    text "[file_name]. [file_time!t]\n[save_name!t]"
-
-                    key "save_delete" action FileDelete(i)
-
-
-screen save():
-
-    # This ensures that any other menu screen is replaced.
-    tag menu
-
-    use navigation
-    use file_picker
-
-screen load():
-
-    # This ensures that any other menu screen is replaced.
-    tag menu
-
-    use navigation
-    use file_picker
-
-init -2:
-    style file_picker_frame is menu_frame
-    style file_picker_nav_button is small_button
-    style file_picker_nav_button_text is small_button_text
-    style file_picker_button is large_button
-    style file_picker_text is large_button_text
 
 
 ##############################################################################
@@ -469,7 +390,7 @@ init -2:
         xalign 1.0
 
     style soundtest_button:
-        xalign 1.0
+        xalign 1.0    
 
 
 ##############################################################################
@@ -536,9 +457,6 @@ screen quick_menu():
         yalign 1.0
 
         textbutton _("Back") action Rollback()
-        textbutton _("Save") action ShowMenu('save')
-        textbutton _("Q.Save") action QuickSave()
-        textbutton _("Q.Load") action QuickLoad()
         textbutton _("Skip") action Skip()
         textbutton _("F.Skip") action Skip(fast=True, confirm=True)
         textbutton _("Auto") action Preference("auto-forward", "toggle")
@@ -559,3 +477,15 @@ init -2:
         selected_hover_color "#cc0"
         insensitive_color "#4448"
 
+###
+
+transform buttonfade:
+
+    on idle:
+        alpha 1.0
+    on hover:
+            alpha 0.0
+            linear 0.1 alpha 1.0
+    on selected_hover:
+            alpha 0.0
+            linear 0.1 alpha 1.0
