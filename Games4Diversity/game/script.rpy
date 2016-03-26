@@ -9,16 +9,13 @@ define n = Character('Nicholas')
 
 # The game starts here.
 label start:
-    $ day = 1
+    $ day = 0
     $ health = 100;
     $ happiness = 100;
     $ piety = 100;
     $ love = 100;
 
-    m "Welcome to ...ENTER_GAMENAME_HERE..."
-
-    jump pickReligion
-
+    m "Welcome to Work in Progress."
 
 label pickReligion:
     
@@ -60,10 +57,10 @@ label pickName:
             jump pickReligion
     
 
-label dayStart:
-    
-    n 'Today is day [day].'
-
+label dayStart:    
     $ day += 1
     $ date = "day" + str(day)
+
+    n 'Today is day [day].'
+
     jump expression date
