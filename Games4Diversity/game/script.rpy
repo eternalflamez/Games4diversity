@@ -9,7 +9,11 @@ define n = Character('Nicholas')
 
 # The game starts here.
 label start:
-    $ day = 0
+    $ day = 1
+    $ health = 100;
+    $ happiness = 100;
+    $ piety = 100;
+    $ love = 100;
 
     m "Welcome to ...ENTER_GAMENAME_HERE..."
 
@@ -17,6 +21,7 @@ label start:
 
 
 label pickReligion:
+    
     $ religion = renpy.input("What is the name of your religion?")
     $ religion = religion.strip()
 
@@ -44,16 +49,21 @@ label pickName:
     if not playername:
         jump pickName
 
-    jump dayStart
+    # $ renpy.show_screen("confirm", message="For the religion [religion] you are [playertitlename]?", yes_action=Jump("dayStart"), no_action=Jump("pickReligion"))
 
+    menu:
+        "Are you [playertitlename] from [religion]?"
+        "Yes":
+            jump dayStart
+
+        "No":
+            jump pickReligion
+    
 
 label dayStart:
-
+    
     n 'Today is day [day].'
 
     $ day += 1
     $ date = "day" + str(day)
     jump expression date
-
-    return
-
