@@ -2,3 +2,6 @@ saves
 log.txt
 errors.txt
 traceback.txt
+
+*.rpyc
+*.rpy.bak
