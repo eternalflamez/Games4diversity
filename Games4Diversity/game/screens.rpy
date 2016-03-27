@@ -180,6 +180,10 @@ init -2:
     style dilemma_buttontext:
         xalign 0.5
         yalign 0.5
+        size 30
+        xmaximum 300
+        layout "subtitle"
+        text_align 0.5
 
 ##############################################################################
 # Input

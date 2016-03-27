@@ -25,7 +25,8 @@ init -1 python hide:
     # with tracebacks and other debugging logs.
 
     config.name = "Confession"
-    config.version = "1.3"
+    config.version = "1.4"
+
     #########################################
     # Themes
 
@@ -145,7 +146,7 @@ init -1 python hide:
 
     ## The default size of text.
 
-    style.default.size = 40
+    style.default.size = 35
 
     ## Note that these only change the size of some of the text. Other
     ## buttons have their own styles.
@@ -170,7 +171,7 @@ init -1 python hide:
     ## Sounds that are used when button and imagemaps are clicked.
 
     style.button.activate_sound = "audio/click.wav"
-    # style.imagemap.activate_sound = "click.wav"
+    style.imagemap.activate_sound = "audio/click.wav"
 
     ## Sounds that are used when entering and exiting the game menu.
 
@@ -291,7 +292,7 @@ init python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-1.0', the windows distribution will be in the
     ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    build.directory_name = "Confession-1.3"
+    build.directory_name = "Confession-1.4"
 
     ## The name that's uses for executables - the program that users will run
     ## to start the game. For example, if this is 'mygame', then on Windows,
