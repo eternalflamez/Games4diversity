@@ -23,9 +23,9 @@ init -1 python hide:
 
     # These control the name and version of the game, that are reported
     # with tracebacks and other debugging logs.
-    config.name = "Confession"
-    config.version = "1.1"
 
+    config.name = "Confession"
+    config.version = "1.2"
     #########################################
     # Themes
 
@@ -169,7 +169,7 @@ init -1 python hide:
 
     ## Sounds that are used when button and imagemaps are clicked.
 
-    # style.button.activate_sound = "click.wav"
+    style.button.activate_sound = "audio/click.wav"
     # style.imagemap.activate_sound = "click.wav"
 
     ## Sounds that are used when entering and exiting the game menu.
@@ -291,7 +291,7 @@ init python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-1.0', the windows distribution will be in the
     ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    build.directory_name = "Confession-1.1"
+    build.directory_name = "Confession-1.2"
 
     ## The name that's uses for executables - the program that users will run
     ## to start the game. For example, if this is 'mygame', then on Windows,

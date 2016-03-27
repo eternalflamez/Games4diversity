@@ -3,6 +3,13 @@
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
 init -3:
+    
+    $ config.keymap['game_menu'].remove('mouseup_3')
+    $ config.keymap['game_menu'].remove('K_ESCAPE')
+    $ config.keymap['game_menu'].remove('K_MENU')
+    
+    $ config.keymap['quit'].append('K_ESCAPE')
+                                                 
     define click = "audio/click.wav"
 
     image bg normal = "ui/background_01.png"
