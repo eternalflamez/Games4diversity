@@ -17,7 +17,7 @@ label day6:
             unknownMan "\"Forgive me [playertitle], for I have sinned.\""
             unknownMan "\"I have been tempted and have cheated on my wife. I think she might know, but I can’t be sure. I… I feel so guilty\""
 
-            call screen dilemma(("Tell your wife, ask for forgiveness", "Pray for forgiveness", "It is not a sin in the eyes of [religion]"))
+            call screen dilemma(("Tell your wife, ask for forgiveness", "Pray for forgiveness", "It is not a sin in the eyes of [religion]", "Man's Voice" "\"What should I do?\""))
 
             if _return == 0:
                 m "Tell your wife, ask for forgiveness."
@@ -46,7 +46,7 @@ label day6:
             unknownMan "\"Forgive me [playertitle], for I have sinned.\""
             unknownMan "\"I have been tempted and have cheated on my wife. She discovered me. I can’t believe I hurt her so much…\""
 
-            call screen dilemma(("Tell your wife, ask for forgiveness", "Pray for forgiveness", "It is not a sin in the eyes of [religion]"))
+            call screen dilemma(("Tell your wife, ask for forgiveness", "Pray for forgiveness", "It is not a sin in the eyes of [religion]", "Man's Voice" "\"What should I do?\""))
 
             if _return == 0:
                 m "Tell your wife, ask for forgiveness."
