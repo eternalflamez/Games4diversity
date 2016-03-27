@@ -1,9 +1,10 @@
 label day5:
+    show scales
     "You had a calm day, nothing serious was going on, until John approached you. He looked confused, as if struggling with a complex issue."
-    "Person" "\"Dear [playertitlename] I have returned for I need guidance.\""
-    "Person" "\"My AI needs to know what it is allowed to do if it needs to avoid a high speed frontal collision.\""    
+    "John" "\"Dear [playertitlename] I have returned for I need guidance.\""
+    "John" "\"My AI needs to know what it is allowed to do if it needs to avoid a high speed frontal collision.\""
 
-    call screen dilemma(("Take one life to save the many", "You cannot interfere", "Pray it will never occur", "Randomize the outcome"), scales, "Person" "\"Is it allowed to make the choice to drive the car into a ravine to save a group of people from an unavoidable crash?\"", "Person")
+    call screen dilemma(("Take one life to save the many", "You cannot interfere", "Pray it will never occur", "Randomize the outcome"), "\"Is it allowed to make the choice to drive the car into a ravine to save a group of people from an unavoidable crash?\"", "John")
 
     if _return == 0:
         m "Let the AI take one life to save many."

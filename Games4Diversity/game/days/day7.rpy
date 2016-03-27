@@ -1,4 +1,5 @@
 label day7:
+    show cradle
     if day4response == 1:
         "News is carried to you from the local hospital. The abortion was performed."
         jump dayStart
@@ -11,7 +12,7 @@ label day7:
     "Hannah Sinclair" "\"To make matters worse, after a recent doctor visit it turns out the child will be born disabled with Spina Bifida, and may never be able to walk. \""
     "Hannah Sinclair" "\"What should I do? Does the church have any views on abortion?\""
 
-    call screen dilemma(("Abort it", "Keep the baby", "Talk with your husband", "Do nothing"), cradle, "\"Please I don't know what to do! I threw away so much for him! I don't... please...\"", "Laura")
+    call screen dilemma(("Abort it", "Keep the baby", "Talk with your husband", "Do nothing"), "\"Please I don't know what to do! I threw away so much for him! I don't... please...\"", "Laura")
 
     if _return == 0:
         m "Keep the child from misery, abort it."

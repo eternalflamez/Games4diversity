@@ -9,7 +9,7 @@
 
 init -1 python hide:
 
-    config.developer = True
+    config.developer = False
 
     ## These control the width and height of the screen.
 

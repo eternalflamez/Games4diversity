@@ -10,7 +10,7 @@ init -3:
     image booth = "ui/booth.png"
 
     # Declare characters used by this game.
-    define m = Character('Me', color="#c8ffc8")
+    define m = Character('', color="#c8ffc8")
 
     # Define images to be used with dilemmas
     image cradle = "ui/circles/cradle.png"
@@ -32,7 +32,7 @@ label start:
     m "Welcome to Confession."
 
 label pickReligion:
-        
+
     $ religion = renpy.input("What is the name of your religion?")
     $ religion = religion.strip()
 
@@ -40,7 +40,7 @@ label pickReligion:
         jump pickReligion
 
     "And so [religion] was created."
-    
+
     jump pickTitle
 
 label pickTitle:
@@ -70,12 +70,15 @@ label pickName:
         "The choices you make will shape the founding tenements of [religion] and how the community develops."
         $ m = Character(playertitlename, color="#c8ffc8")
         hide monk
-        jump dayStart 
+        jump dayStart
 
     if _return == 1:
         jump pickReligion
 
 label dayStart:
+    hide cradle
+    hide heart
+    hide scales
     show booth with fade
     # todo: fadeout and in
     $ day += 1

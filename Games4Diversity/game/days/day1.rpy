@@ -3,7 +3,7 @@ define laura = Character('Laura')
 label day1:
 
     show heart
-    
+
     "It is a Spring morning, and you are familiarising yourself with the layout of the church, when a woman enters through the doors. She is clutching her arms to herself and looks slightly sad. She approaches you."
     "She introduces herself as Laura, a secretary for a nearby business. After introducing yourself as a new [playertitle] of [religion], she nervously begins to talk."
     laura "\"I…this is kind of hard to talk about… but I really don’t know who else to ask… you see, I feel a bit… out of touch with my husband…\""
@@ -20,7 +20,7 @@ label day1question:
                      "Hire a private investigator",
                      "Encourage him to confess")
 
-    call screen dilemma(day1options)
+    call screen dilemma(day1options, "\"What should I do?\"", "Laura")
 
     if _return == 0:
         jump day1option1
@@ -55,5 +55,4 @@ label day1end:
     laura "\"You…you really think so?\""
     laura "\"Alright… I… I’ll do that… Thank you [playertitlename]…\""
     "She slowly leaves, staring at the floor, holding herself steady."
-    hide heart
     jump dayStart
