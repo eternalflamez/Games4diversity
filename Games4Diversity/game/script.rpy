@@ -8,6 +8,7 @@ init -3:
     image bg normal = "ui/background_01.png"
     image monk = "ui/monk2.png"
     image booth = "ui/booth.png"
+    image cover = "ui/cover.png"
 
     # Declare characters used by this game.
     define m = Character('', color="#c8ffc8")
@@ -20,7 +21,7 @@ init -3:
 # The game starts here.
 label start:
     scene bg normal
-    show monk
+    show cover
     play music "audio/BirdsGarden_EditedV2.ogg" loop
 
     $ day = 0
@@ -30,6 +31,7 @@ label start:
     $ love = 100;
 
     m "Welcome to Confession."
+
 
 label pickReligion:
 
@@ -69,7 +71,7 @@ label pickName:
         "You have been tasked with helping to grow a small community that has adopted religion happily"
         "The choices you make will shape the founding tenements of [religion] and how the community develops."
         $ m = Character(playertitlename, color="#c8ffc8")
-        hide monk
+        hide cover
         jump dayStart
 
     if _return == 1:
