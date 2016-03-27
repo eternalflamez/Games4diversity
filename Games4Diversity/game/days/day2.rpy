@@ -2,11 +2,10 @@ label day2:
 
     show scales
 
-    "You have not seen John in weeks."
-    "You decide to visit him"
+    "You decide to visit your dear friend John, who is a member of this community."
     "After a pleasant talk John drew a serious face and asked you with a pleading voice:"
 
-    "John" "\"Dear [playertitle] I am in need of guidance.\""
+    "John" "\"Actually, [playername] I could use some advice on a project I'm working on.\""
     "John" "\"As you know, I work as an artificial intelligence programmer, and I need to know what to do.\""
     "John" "\"I am working on a self-driving car, however I do not know if I can give an AI the autonomy to make a choice about human safety.\""
 
