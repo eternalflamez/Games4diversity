@@ -104,7 +104,7 @@ init -2:
 ######
 # A dilemma
 # ¯\_(ツ)_/¯
-screen dilemma(options, name=False, question=False):
+screen dilemma(options, question=False, name=False):
     
     tag menu
     
