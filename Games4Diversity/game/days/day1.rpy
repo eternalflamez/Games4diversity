@@ -22,6 +22,7 @@ label day1question:
     elif _return == 2:
         jump day1sarcasm
     elif _return == 4:
+        jump day1flirt
 
 label day1kind:
     m "Just have faith in your husband, my child."

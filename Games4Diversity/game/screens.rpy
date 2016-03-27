@@ -106,32 +106,55 @@ init -2:
 # ¯\_(ツ)_/¯
 screen dilemma(options):
     
-    tag menu
+    $ button_idle = Frame("ui/menus/button_idle.png", 25, 25)
+    $ button_hover = Frame("ui/menus/button_hover.png", 25, 25)
     
-    imagemap:
-        alpha False
-        cache False
-        ground 'ui/menus/buttons_unpressed.png'
-        idle 'ui/menus/buttons_unpressed.png' 
-        hover 'ui/menus/buttons_pressed.png'
-        
-        hotspot(241, 142, 415, 178) action Return(0) at buttonfade
-        text options[0] style "button0text"
-        hotspot (1265, 129, 415, 180) action Return(1) at buttonfade
-        text options[1] style "button1text"
-        hotspot (107, 450, 415, 179) action Return(2) at buttonfade
-        text options[2] style "button2text"
-        hotspot (1398, 449, 416, 180) action Return(3) at buttonfade
-        text options[3] style "button3text"
-       
-style button0text:
-    pos(241, 142)
-style button1text:
-    pos(1265, 129)
-style button2text:
-    pos(107, 450)
-style button3text:
-    pos(1398, 449)
+    frame:
+        #area(241, 142, 415, 180)
+        style "dilemma_buttonframe"
+        xalign 0.2 yalign 0.2
+        imagebutton: 
+            idle button_idle
+            hover button_hover
+            action Return(0)
+        text options[0] style "dilemma_buttontext"
+    #hotspot (1265, 129, 415, 180) action Return(1) at buttonfade
+    frame:
+        xalign 0.8 yalign 0.2
+        style "dilemma_buttonframe"
+        imagebutton:
+            idle button_idle
+            hover button_hover
+            action Return(1)
+        text options[1] style "dilemma_buttontext"
+    #hotspot (107, 450, 415, 180) action Return(2) at buttonfade
+    frame:
+        #area(107, 450, 415, 180)
+        xalign 0.1 yalign 0.5
+        style "dilemma_buttonframe"
+        imagebutton: 
+            idle button_idle
+            hover button_hover
+            action Return(0)
+        text options[2] style "dilemma_buttontext"
+    #hotspot (1398, 449, 415, 180) action Return(3) at buttonfade
+    frame:
+        #area(1398, 449, 415, 180)
+        style "dilemma_buttonframe"
+        xalign 0.9 yalign 0.5
+        imagebutton: 
+            idle button_idle
+            hover button_hover
+            action Return(0)
+        text options[3] style "dilemma_buttontext"
+
+style dilemma_buttonframe:
+    background "#00000000"
+    xsize 415 ysize 180
+
+style dilemma_buttontext:
+    xalign 0.5
+    yalign 0.5
 
 ##############################################################################
 # Input
