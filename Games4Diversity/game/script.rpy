@@ -3,6 +3,8 @@
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
 
+image bg normal = "ui/background_01.png"
+
 # Declare characters used by this game.
 define m = Character('Me', color="#c8ffc8")
 
@@ -13,6 +15,8 @@ define scales = "ui/circles/scales.png"
 
 # The game starts here.
 label start:
+    scene bg normal
+
     $ day = 0
     $ health = 100;
     $ happiness = 100;
