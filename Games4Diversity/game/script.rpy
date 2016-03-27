@@ -5,7 +5,6 @@
 
 # Declare characters used by this game.
 define m = Character('Me', color="#c8ffc8")
-define n = Character('Nicholas')
 
 # The game starts here.
 label start:
@@ -51,7 +50,11 @@ label pickName:
     menu:
         "Are you [playertitlename] from [religion]?"
         "Yes":
-            jump dayStart
+            "You are [playertitlename], one of the founders of [religion]."
+            "You have been tasked with helping to grow a small community that has adopted religion happily"
+            "The choices you make will shape the founding tenements of [religion] and how the community develops."
+            $ m = Character(playertitlename, color="#c8ffc8")
+            jump dayStart # todo: fadeout and in
 
         "No":
             jump pickReligion
@@ -61,6 +64,6 @@ label dayStart:
     $ day += 1
     $ date = "day" + str(day)
 
-    n 'Today is day [day].'
+    'Today is day [day].'
 
     jump expression date

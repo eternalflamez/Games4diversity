@@ -135,7 +135,7 @@ screen dilemma(options):
         imagebutton: 
             idle button_idle
             hover button_hover
-            action Return(0)
+            action Return(2)
         text options[2] style "dilemma_buttontext"
     #hotspot (1398, 449, 415, 180) action Return(3) at buttonfade
     frame:
@@ -145,7 +145,7 @@ screen dilemma(options):
         imagebutton: 
             idle button_idle
             hover button_hover
-            action Return(0)
+            action Return(3)
         text options[3] style "dilemma_buttontext"
 
 style dilemma_buttonframe:
