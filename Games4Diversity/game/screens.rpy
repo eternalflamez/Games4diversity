@@ -128,6 +128,7 @@ screen dilemma(options, question=False, name=False):
         style "dilemma_buttonframe"
         xalign 0.2 yalign 0.2
         imagebutton: 
+            #style "dilemma_buttonframe_button"
             idle button_idle
             hover button_hover
             action Return(0)
@@ -139,6 +140,7 @@ screen dilemma(options, question=False, name=False):
             xalign 0.8 yalign 0.2
             style "dilemma_buttonframe"
             imagebutton:
+                #style "dilemma_buttonframe_button"
                 idle button_idle
                 hover button_hover
                 action Return(1)
@@ -150,6 +152,7 @@ screen dilemma(options, question=False, name=False):
             xalign 0.1 yalign 0.5
             style "dilemma_buttonframe"
             imagebutton: 
+                #style "dilemma_buttonframe_button"
                 idle button_idle
                 hover button_hover
                 action Return(2)
@@ -161,6 +164,7 @@ screen dilemma(options, question=False, name=False):
             style "dilemma_buttonframe"
             xalign 0.9 yalign 0.5
             imagebutton: 
+                #style "dilemma_buttonframe_button"
                 idle button_idle
                 hover button_hover
                 action Return(3)
@@ -171,6 +175,7 @@ init -2:
     style dilemma_buttonframe:
         background "#00000000"
         xsize 415 ysize 180
+        activate_sound click
 
     style dilemma_buttontext:
         xalign 0.5

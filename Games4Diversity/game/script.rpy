@@ -2,23 +2,26 @@
 
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
+init -3:
+    define click = "audio/click.wav"
 
-image bg normal = "ui/background_01.png"
-image monk = "ui/monk2.png"
-image booth = "ui/booth.png"
+    image bg normal = "ui/background_01.png"
+    image monk = "ui/monk2.png"
+    image booth = "ui/booth.png"
 
-# Declare characters used by this game.
-define m = Character('', color="#c8ffc8")
+    # Declare characters used by this game.
+    define m = Character('', color="#c8ffc8")
 
-# Define images to be used with dilemmas
-image cradle = "ui/circles/cradle.png"
-image heart = "ui/circles/heart.png"
-image scales = "ui/circles/scales.png"
+    # Define images to be used with dilemmas
+    image cradle = "ui/circles/cradle.png"
+    image heart = "ui/circles/heart.png"
+    image scales = "ui/circles/scales.png"
 
 # The game starts here.
 label start:
     scene bg normal
     show monk
+    play music "audio/BirdsGarden_Edited.wav" loop
 
     $ day = 0
     $ health = 100;
