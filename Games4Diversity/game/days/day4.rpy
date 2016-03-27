@@ -1,12 +1,12 @@
-define john = Character('John')
+define letter = Character('Mysterious letter')
 
 label day4:
 
-    john "\"Dear [playertitle], I am visiting you for I need guidance.\""
-    john "\"My wife is pregnant with another child.\""
-    john "\"We already have three children and we do not have the funds to support another mouth to feed.\""
-    john "\"I want her to have an abortion but she wants to keep it.\""
-    john "\"Tell me [playertitle], what should I do?\""
+    letter "\"You receive a letter addressed to you. \""
+    letter "\"Dear [playertitlename], I am writing to you for guidance on a delicate situation.\""
+    letter "\"My wife is pregnant with another child. We already have three children and we do not have the funds to support another mouth to feed.\""
+    letter "\"I want her to have an abortion but she wants to keep it. What should I do?\""
+    letter "\"Yours sincerely, Gary Sinclair.\""
 
     jump day4question
 
@@ -15,7 +15,7 @@ label day4question:
     $ day4options = ("Convince her to abort",
                      "Don't abort, keep the child",
                      "Discuss this with your wife")
-    call screen dilemma(day4options)
+    call screen dilemma(day4options, "\"Tell me [playertitle], What should I do?\"", "Letter from Gary Sinclair")
 
     if _return == 0:
         jump day4option1
@@ -40,5 +40,5 @@ label day4option3:
     jump day4end
 
 label day4end:
-    john "\"Thank you for your guidance [playertitlename]\""
+    "You pen your response and send it to the address provided."
     jump dayStart

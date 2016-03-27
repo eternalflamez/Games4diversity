@@ -47,18 +47,17 @@ label pickName:
 
     # $ renpy.show_screen("confirm", message="For the religion [religion] you are [playertitlename]?", yes_action=Jump("dayStart"), no_action=Jump("pickReligion"))
 
-    menu:
-        "Are you [playertitlename] from [religion]?"
-        "Yes":
-            "You are [playertitlename], one of the founders of [religion]."
-            "You have been tasked with helping to grow a small community that has adopted religion happily"
-            "The choices you make will shape the founding tenements of [religion] and how the community develops."
-            $ m = Character(playertitlename, color="#c8ffc8")
-            jump dayStart 
+    call screen dilemma(("Yes", "No"), "Are you [playertitlename] from [religion]?")
 
-        "No":
-            jump pickReligion
-    
+    if _return == 0:
+        "You are [playertitlename], one of the founders of [religion]."
+        "You have been tasked with helping to grow a small community that has adopted religion happily"
+        "The choices you make will shape the founding tenements of [religion] and how the community develops."
+        $ m = Character(playertitlename, color="#c8ffc8")
+        jump dayStart 
+
+    if _return == 1:
+        jump pickReligion
 
 label dayStart:    
     # todo: fadeout and in

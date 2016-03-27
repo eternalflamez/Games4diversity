@@ -9,9 +9,8 @@ label day3:
         "You are tending to your duties in the church when Laura bursts through the doors, tears streaming down her face."
         laura "\"I... [playername]... he's cheating on me... he was with another woman... *sob* I don't... *sob*\""
         "She sniffles."
-        laura "\"Please I don't know what to do! I threw away so much for him! I don't... please...\""
         
-        call screen dilemma(("Divorce him", "Tell him to confess", "Eye for an eye", "Do nothing"))
+        call screen dilemma(("Divorce him", "Tell him to confess", "Eye for an eye", "Do nothing"), "\"Please I don't know what to do! I threw away so much for him! I don't... please...\"", "Laura")
 
         if _return == 0:
             m "Divorce him. Cut him entirely out of your life."
@@ -33,11 +32,9 @@ label day3:
     elif day1response == 4:
         "You are on confessional duty today. It is a slow day, and only a single person comes to confess today."
         "A man's voice starts to pass through the dividing lattice:"
-
         "Man" "\"Forgive me [playertitle], for I have sinned.\""
-        "\"I have been tempted and have cheated on my wife. I think she might know, but I can't be for sure. I... I feel so guilty...\""
-
-        call screen dilemma(("Ask wife for forgiveness", "Pray for forgiveness", "This is no sin to me"))
+        
+        call screen dilemma(("Ask wife for forgiveness", "Pray for forgiveness", "This is no sin to me"), "\"I have been tempted and have cheated on my wife. I think she might know, but I can't be for sure. I... I feel so guilty...\"", "Laura")
 
         if _return == 0:
             m "Tell your wife, ask for her forgiveness."
