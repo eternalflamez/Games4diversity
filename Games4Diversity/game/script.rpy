@@ -19,7 +19,7 @@ label start:
     $ piety = 100;
     $ love = 100;
 
-    m "Welcome to Work in Progress."
+    m "Welcome to Confession."
 
 label pickReligion:
     
@@ -52,7 +52,7 @@ label pickName:
 
     # $ renpy.show_screen("confirm", message="For the religion [religion] you are [playertitlename]?", yes_action=Jump("dayStart"), no_action=Jump("pickReligion"))
 
-    call screen dilemma(("Yes", "No"), "Are you [playertitlename] from [religion]?")
+    call screen dilemma(("Yes", "No"), None, "Are you [playertitlename] from [religion]?")
 
     if _return == 0:
         "You are [playertitlename], one of the founders of [religion]."
