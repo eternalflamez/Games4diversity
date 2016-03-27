@@ -1,16 +1,18 @@
 label day3:
+    show heart
     if day1response == 1 or day1response == 2:
         "You are tending to your duties in the church when Laura enters through the doors and appreaches you, a soft smile on her lips."
-        laura "\"Hello again, thank you for your guidance [playertitlename]. I think it's worked out. Releationships have to be worked at, don't they? I'm sure we'll continue to find happiness. This has just been the first real time we've drifted apart... I suppose it's to be expected as we get older, he?\""
-        
+        laura "\"Hello again, thank you for your guidance [playertitlename]. I think it's worked out. Releationships have to be worked at, don't they?\""
+        laura "\"I'm sure we'll continue to find happiness. This has just been the first real time we've drifted apart... I suppose it's to be expected as we get older, he?\""
+
         jump dayStart
 
     elif day1response == 3:
         "You are tending to your duties in the church when Laura bursts through the doors, tears streaming down her face."
         laura "\"I... [playername]... he's cheating on me... he was with another woman... *sob* I don't... *sob*\""
         "She sniffles."
-        
-        call screen dilemma(("Divorce him", "Tell him to confess", "Eye for an eye", "Do nothing"), heart, "\"Please I don't know what to do! I threw away so much for him! I don't... please...\"", "Laura")
+
+        call screen dilemma(("Divorce him", "Tell him to confess", "Eye for an eye", "Do nothing"), "\"Please I don't know what to do! I threw away so much for him! I don't... please...\"", "Laura")
 
         if _return == 0:
             m "Divorce him. Cut him entirely out of your life."
@@ -33,7 +35,7 @@ label day3:
         "You are on confessional duty today. It is a slow day, and only a single person comes to confess today."
         "A man's voice starts to pass through the dividing lattice:"
         "Man" "\"Forgive me [playertitle], for I have sinned.\""
-        
+
         call screen dilemma(("Ask wife for forgiveness", "Pray for forgiveness", "This is no sin to me"), "\"I have been tempted and have cheated on my wife. I think she might know, but I can't be for sure. I... I feel so guilty...\"", "Laura")
 
         if _return == 0:
@@ -69,7 +71,7 @@ label day3resp42end:
     "Man" "\"Alright... I... If that's enough... I can't stand seeing her get hurt... I'll promise to be a better husband for her.\""
     "The man leaves the confession booth."
     "Throughout the rest of the day you see him burying his head in his hands in prayer."
-    
+
     jump dayStart
 
 label day3resp43end:

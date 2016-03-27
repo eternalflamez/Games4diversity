@@ -1,6 +1,7 @@
 define letter = Character('Mysterious letter')
 
 label day4:
+    show cradle
 
     letter "\"You receive a letter addressed to you. \""
     letter "\"Dear [playertitlename], I am writing to you for guidance on a delicate situation.\""
@@ -15,7 +16,7 @@ label day4question:
     $ day4options = ("Convince her to abort",
                      "Don't abort, keep the child",
                      "Discuss this with your wife")
-    call screen dilemma(day4options, cradle, "\"Tell me [playertitle], What should I do?\"", "Letter from Gary Sinclair")
+    call screen dilemma(day4options, "\"Tell me [playertitle], What should I do?\"", "Letter from Gary Sinclair")
 
     if _return == 0:
         jump day4option1
