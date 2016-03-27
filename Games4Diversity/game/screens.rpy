@@ -104,7 +104,7 @@ init -2:
 ######
 # A dilemma
 # ¯\_(ツ)_/¯
-screen dilemma(options, circle = None, question=False, name=False):
+screen dilemma(options, question=False, name=False):
     
     tag menu
         
@@ -122,9 +122,6 @@ screen dilemma(options, circle = None, question=False, name=False):
 
         if question:
             text question id "what"
-    
-    if circle is not None:
-        add circle
     
     frame:
         #area(241, 142, 415, 180)
