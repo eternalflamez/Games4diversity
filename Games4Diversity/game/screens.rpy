@@ -104,10 +104,25 @@ init -2:
 ######
 # A dilemma
 # ¯\_(ツ)_/¯
-screen dilemma(options):
+screen dilemma(options, question=False, name=False):
+    
+    tag menu
     
     $ button_idle = Frame("ui/menus/button_idle.png", 25, 25)
     $ button_hover = Frame("ui/menus/button_hover.png", 25, 25)
+    
+    window:
+        id "window"
+
+        has vbox:
+            style "say_vbox"
+            
+        if name:
+            text name id "who"
+
+        if question:
+            text question id "what"
+
     
     frame:
         #area(241, 142, 415, 180)
