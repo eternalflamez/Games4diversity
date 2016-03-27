@@ -5,7 +5,7 @@ label day4:
 
     letter "\"You receive a letter addressed to you. \""
     letter "\"Dear [playertitlename], I am writing to you for guidance on a delicate situation.\""
-    letter "\"My wife is pregnant with another child. We already have three children and we do not have the funds to support another mouth to feed.\""
+    letter "\"My wife is pregnant with another child. We already have three children and we do not have the money to feed another mouth.\""
     letter "\"I want her to have an abortion but she wants to keep it. What should I do?\""
     letter "\"Yours sincerely, Gary Sinclair.\""
 
