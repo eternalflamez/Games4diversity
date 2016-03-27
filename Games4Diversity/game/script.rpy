@@ -21,7 +21,7 @@ init -3:
 label start:
     scene bg normal
     show monk
-    play music "audio/BirdsGarden_Edited.wav" loop
+    play music "audio/BirdsGarden_EditedV2.ogg" loop
 
     $ day = 0
     $ health = 100;
