@@ -26,6 +26,7 @@ init -1 python hide:
     config.name = "Games4Diversity"
     config.version = "0.0"
     
+
     #########################################
     # Themes
 
@@ -145,7 +146,7 @@ init -1 python hide:
 
     ## The default size of text.
 
-    style.default.size = 40
+    style.default.size = 35
 
     ## Note that these only change the size of some of the text. Other
     ## buttons have their own styles.
@@ -170,7 +171,7 @@ init -1 python hide:
     ## Sounds that are used when button and imagemaps are clicked.
 
     style.button.activate_sound = "audio/click.wav"
-    # style.imagemap.activate_sound = "click.wav"
+    style.imagemap.activate_sound = "audio/click.wav"
 
     ## Sounds that are used when entering and exiting the game menu.
 
