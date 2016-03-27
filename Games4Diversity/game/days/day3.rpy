@@ -10,7 +10,7 @@ label day3:
         laura "\"I... [playername]... he's cheating on me... he was with another woman... *sob* I don't... *sob*\""
         "She sniffles."
         
-        call screen dilemma(("Divorce him", "Tell him to confess", "Eye for an eye", "Do nothing"), "\"Please I don't know what to do! I threw away so much for him! I don't... please...\"", "Laura")
+        call screen dilemma(("Divorce him", "Tell him to confess", "Eye for an eye", "Do nothing"), heart, "\"Please I don't know what to do! I threw away so much for him! I don't... please...\"", "Laura")
 
         if _return == 0:
             m "Divorce him. Cut him entirely out of your life."
