@@ -15,22 +15,13 @@ label day1question:
 
     call screen dilemma(day1options)
 
-    menu: 
-        "He doesn't pay much attention to me anymore these days, he just seems so absent. I've had this feeling for months now and I just don't know what to do."
-        "kind response":
-            jump day1kind
-
-        "harsh response":
-            jump day1harsh
-
-        "sarcasm":
-            jump day1sarcasm
-
-        "flirt":
-            jump day1flirt
-
-        "Repeat the question":
-            jump day1question
+    if _return == 0:
+        jump day1kind
+    elif _return == 1:
+        jump day1harsh
+    elif _return == 2:
+        jump day1sarcasm
+    elif _return == 4:
 
 label day1kind:
     m "Just have faith in your husband, my child."
