@@ -1,48 +1,52 @@
+define laura = Character('Laura')
+
 label day1:
-    
-    "As you're working in your house of [religion], a woman comes up to you."
-    "woman" "[playertitle], I need your help."
-    "It's Laura, she and her husband work a nearby farm."
+
+    "It is a Spring morning, and you are familiarising yourself with the layout of the church, when a woman enters through the doors. She is clutching her arms to herself and looks slightly sad. She approaches you."
+    "She introduces herself as Laura, a secretary for a nearby business. After introducing yourself as a new [playertitle] of [religion], she nervously begins to talk."
+    laura "\"I…this is kind of hard to talk about… but I really don’t know who else to ask… you see, I feel a bit… out of touch with my husband…\""
+    laura "\"I’m not sure how to describe it really, he feels distant all the time… we’ve never had a problem talking to each other except…\""
+    laura "\"Is…is he cheating on me do you think?\""
+    laura "\"Oh gods that’s a horrible thing to say, he can’t be…I mean, I don’t… I don’t know what to do…\""
 
     jump day1question
 
 label day1question:
-    m "Hey Laura, what can I help you with today?"
-    "laura" "I feel like my husband is cheating on me."
-    "laura" "He doesn't pay much attention to me anymore these days, he just seems so absent. I've had this feeling for months now and I just don't know what to do."
-    
-    $ day1options = ("Kind Response", "Harsh Response", "Sarcasm", "Flirt")
 
+    $ day1options = ("Trust in your husband", "Rekindle your love", "Hire a private investigator", "Encourage him to confess")
     call screen dilemma(day1options)
 
     if _return == 0:
-        jump day1kind
+        jump day1option1
     elif _return == 1:
-        jump day1harsh
+        jump day1option2
     elif _return == 2:
-        jump day1sarcasm
-    elif _return == 4:
-        jump day1flirt
+        jump day1option3
+    elif _return == 3:
+        jump day1option4
 
-label day1kind:
-    m "Just have faith in your husband, my child."
-    $ responsetype = 1
-    $ love += 1;
-    $ happiness -= 1;
-    jump dayStart
+label day1option1:
+    m "\"Trust in your husband, a marriage has struggles and hardships which you will trial through.\""
+    $ day1response = 1
+    jump day1end
 
-label day1harsh:
-    m "Confront your husband, tell him what you're thinking. It could just be that there's something else going on."
+label day1option2:
+    m "\"Rekindle your love together by some form of romantic gesture.\""
     $ responsetype = 2
-    jump dayStart
+    jump day1end
 
-label day1sarcasm:
-    m "*laughs*"
-    m "Good luck with that."
+label day1option3:
+    m "\"Hire a private investigator to watch your husband.\""
     $ responsetype = 3
-    jump dayStart
+    jump day1end
 
-label day1flirt:
-    m "So do you want to get back at him?"
+label day1option4:
+    m "\"Encourage him to attend confession.\""
     $ responsetype = 4
+    jump day1end
+
+label day1end:
+    laura "\"You…you really think so?\""
+    laura "\"Alright… I… I’ll do that… Thank you [playertitlename]…\""
+    "She slowly leaves, staring at the floor, holding herself steady."
     jump dayStart
