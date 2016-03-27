@@ -104,10 +104,10 @@ init -2:
 ######
 # A dilemma
 # ¯\_(ツ)_/¯
-screen dilemma(options, question=False, name=False):
+screen dilemma(options, circle = None, question=False, name=False):
     
     tag menu
-    
+        
     $ button_idle = Frame("ui/menus/button_idle.png", 25, 25)
     $ button_hover = Frame("ui/menus/button_hover.png", 25, 25)
     
@@ -122,7 +122,9 @@ screen dilemma(options, question=False, name=False):
 
         if question:
             text question id "what"
-
+    
+    if circle is not None:
+        add circle
     
     frame:
         #area(241, 142, 415, 180)

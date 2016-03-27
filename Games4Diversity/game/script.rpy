@@ -6,6 +6,11 @@
 # Declare characters used by this game.
 define m = Character('Me', color="#c8ffc8")
 
+# Define images to be used with dilemmas
+define cradle = "ui/circles/cradle.png"
+define heart = "ui/circles/heart.png"
+define scales = "ui/circles/scales.png"
+
 # The game starts here.
 label start:
     $ day = 0
