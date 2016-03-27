@@ -5,7 +5,7 @@ label day8:
         "It is a quiet day today."
         jump dayStart
 
-    if day7response > 1:
+    elif day7resp > 1:
         "You receive a letter. The handwriting seems to have been hurried."
         "Hurried letter" "\"Dear [playertitlename], I am writing to you again as the situation has changed.\""
         "Hurried letter" "\"My wife is still pregnant with our baby, who will be disabled and unable to ever walk. It might even turn out worse than that.\""
@@ -26,6 +26,6 @@ label day8:
             $ day8resp = 3;
             jump dayStart
 
-    if day7response == 1:
+    elif day7resp == 1:
         "News is carried to you from the local hospital. The abortion was performed."
         jump dayStart
