@@ -2,6 +2,10 @@ label day8:
     show cradle
 
     if day4response == 1:
+        hide cradle
+        hide heart
+        hide scales
+        show monk
         "It is a quiet day today."
         jump dayStart
 

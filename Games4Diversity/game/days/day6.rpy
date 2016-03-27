@@ -2,6 +2,10 @@ define unknownMan = Character("Man's Voice")
 label day6:
     show heart
     if day1response == 1 or day1response == 2:
+        hide cradle
+        hide heart
+        hide scales
+        show monk
         "It is a quiet day today."
 
         jump dayStart
@@ -61,6 +65,10 @@ label day6:
                 jump day6resp4resp3
 
     elif day1response == 4:
+        hide cradle
+        hide heart
+        hide scales
+        show monk
         "It is a quiet day today."
 
         jump dayStart

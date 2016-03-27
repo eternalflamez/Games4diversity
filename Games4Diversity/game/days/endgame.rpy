@@ -2,6 +2,7 @@ label endgame:
     hide cradle
     hide heart
     hide scales
+    hide monk
 
     show monk
     "Thus ends your 10th day as a [playertitle] of [religion]. You have begun shaping your community in your image, and your actions reflect how this society will grow. "

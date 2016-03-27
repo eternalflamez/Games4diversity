@@ -76,6 +76,7 @@ label dayStart:
     hide cradle
     hide heart
     hide scales
+    hide monk
     show booth with fade
     # todo: fadeout and in
     $ day += 1
