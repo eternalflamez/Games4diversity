@@ -8,7 +8,7 @@ image monk = "ui/monk2.png"
 image booth = "ui/booth.png"
 
 # Declare characters used by this game.
-define m = Character('Me', color="#c8ffc8")
+define m = Character('', color="#c8ffc8")
 
 # Define images to be used with dilemmas
 image cradle = "ui/circles/cradle.png"
