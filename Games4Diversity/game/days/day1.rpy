@@ -13,7 +13,11 @@ label day1:
 
 label day1question:
 
-    $ day1options = ("Trust in your husband", "Rekindle your love", "Hire a private investigator", "Encourage him to confess")
+    $ day1options = ("Trust in your husband",
+                     "Rekindle your love",
+                     "Hire a private investigator",
+                     "Encourage him to confess")
+
     call screen dilemma(day1options)
 
     if _return == 0:
@@ -32,17 +36,17 @@ label day1option1:
 
 label day1option2:
     m "\"Rekindle your love together by some form of romantic gesture.\""
-    $ responsetype = 2
+    $ day1response = 2
     jump day1end
 
 label day1option3:
     m "\"Hire a private investigator to watch your husband.\""
-    $ responsetype = 3
+    $ day1response = 3
     jump day1end
 
 label day1option4:
     m "\"Encourage him to attend confession.\""
-    $ responsetype = 4
+    $ day1response = 4
     jump day1end
 
 label day1end:
