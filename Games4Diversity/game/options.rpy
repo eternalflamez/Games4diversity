@@ -25,7 +25,7 @@ init -1 python hide:
     # with tracebacks and other debugging logs.
 
     config.name = "Confession"
-    config.version = "1.4"
+    config.version = "1.5"
 
     #########################################
     # Themes
@@ -36,44 +36,44 @@ init -1 python hide:
     ## The theme function takes a number of parameters that can
     ## customize the color scheme.
 
-    theme.diamond(
-        ## Theme: Diamond
-        ## Color scheme: Basic Blue
+    theme.tv(
+        ## Theme: TV
+        ## Color scheme: Creamsicle
 
         ## The color of an idle widget face.
-        widget = "#003c78",
+        widget = "#D96B00",
 
         ## The color of a focused widget face.
-        widget_hover = "#0050a0",
+        widget_hover = "#FD9B1C",
 
         ## The color of the text in a widget.
-        widget_text = "#c8ffff",
+        widget_text = "#FCE6B1",
 
         ## The color of the text in a selected widget. (For
         ## example, the current value of a preference.)
-        widget_selected = "#ffffc8",
+        widget_selected = "#ffffff",
 
         ## The color of a disabled widget face.
-        disabled = "#404040",
+        disabled = "#FFECBF",
 
         ## The color of disabled widget text.
-        disabled_text = "#c8c8c8",
+        disabled_text = "#ffffff",
 
         ## The color of informational labels.
-        label = "#ffffff",
+        label = "#502F13",
 
         ## The color of a frame containing widgets.
-        frame = "#6496c8",
+        frame = "#FFECBF",
 
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        mm_root = "#dcebff",
+        mm_root = "#FDF5E3",
 
         ## The background of the game menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        gm_root = "#dcebff",
+        gm_root = "#FDF5E3",
 
         ## If this is True, the in-game window is rounded. If False,
         ## the in-game window is square.
@@ -292,7 +292,7 @@ init python:
     ## The name that's used for directories and archive files. For example, if
     ## this is 'mygame-1.0', the windows distribution will be in the
     ## directory 'mygame-1.0-win', in the 'mygame-1.0-win.zip' file.
-    build.directory_name = "Confession-1.4"
+    build.directory_name = "Confession-1.5"
 
     ## The name that's uses for executables - the program that users will run
     ## to start the game. For example, if this is 'mygame', then on Windows,

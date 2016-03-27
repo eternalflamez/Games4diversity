@@ -8,7 +8,7 @@ label day10:
 
     "John" "\"Dear [playertitlename] I have returned for I fear that I have sinned.\""
     "John" "\"My AI has killed people in the crash.\""
-    "John" "\"It was an unavoidable situation and the car had to divert its course.\"" 
+    "John" "\"It was an unavoidable situation and the car had to divert its course.\""
 
     call screen dilemma(("Bear the burden", "The driver is responsible", "The AI is responsible"), "\"Am… am I responsible for these deaths...?\"", "John")
 
