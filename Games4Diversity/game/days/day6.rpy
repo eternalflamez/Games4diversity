@@ -1,4 +1,4 @@
-label day3:
+label day6:
     if day1response == 1 or day1response == 2:
         "It is a quiet day today."
 
