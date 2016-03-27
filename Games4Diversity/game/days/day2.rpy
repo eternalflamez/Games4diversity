@@ -5,7 +5,7 @@ label day2:
     unknownMan "I am working on a self-driving car, however I do not know if I can give an AI the autonomy to make a choice about human safety. "
     unknownMan "Does an AI have the right to crash a car to potentially avoid a larger accident from happening?"
 
-    call screen dilemma(("Allow", "Do not allow"), "Does an AI have the right to crash a car to potentially avoid a larger accident from happening?", "Person")
+    call screen dilemma(("Allow", "Do not allow"), scales, "Does an AI have the right to crash a car to potentially avoid a larger accident from happening?", "Person")
 
     if _return == 0:
         m "Allow such a choice to be made by an AI."

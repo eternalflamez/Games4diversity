@@ -18,7 +18,7 @@ label day1question:
                      "Hire a private investigator",
                      "Encourage him to confess")
 
-    call screen dilemma(day1options)
+    call screen dilemma(day1options, heart)
 
     if _return == 0:
         jump day1option1

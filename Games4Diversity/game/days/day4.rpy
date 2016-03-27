@@ -15,7 +15,7 @@ label day4question:
     $ day4options = ("Convince her to abort",
                      "Don't abort, keep the child",
                      "Discuss this with your wife")
-    call screen dilemma(day4options, "\"Tell me [playertitle], What should I do?\"", "Letter from Gary Sinclair")
+    call screen dilemma(day4options, cradle, "\"Tell me [playertitle], What should I do?\"", "Letter from Gary Sinclair")
 
     if _return == 0:
         jump day4option1
