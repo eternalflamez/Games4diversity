@@ -54,13 +54,14 @@ label pickName:
             "You have been tasked with helping to grow a small community that has adopted religion happily"
             "The choices you make will shape the founding tenements of [religion] and how the community develops."
             $ m = Character(playertitlename, color="#c8ffc8")
-            jump dayStart # todo: fadeout and in
+            jump dayStart 
 
         "No":
             jump pickReligion
     
 
 label dayStart:    
+    # todo: fadeout and in
     $ day += 1
     $ date = "day" + str(day)
 
